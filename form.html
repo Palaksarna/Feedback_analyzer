@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Builder Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="script" href="script.js" >
+    
+ 
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Feedback analysis form</h1>
+            <!--<p>Create, edit, and manage forms with ease</p>-->
+        </div>
+
+        <!-- Dashboard -->
+        <div id="dashboard" class="main-section">
+            <div class="dashboard">
+                <button class="create-form-btn" onclick="createNewForm()">
+                    ➕ Create New Form
+                </button>
+                
+                <div class="forms-grid" id="formsGrid">
+                    <!-- Forms will be loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Builder -->
+        <div id="formBuilder" class="main-section hidden">
+            <div class="form-builder">
+                <div class="form-header">
+                    <h2 id="builderTitle">Create New Form</h2>
+                </div>
+                
+                <input type="text" id="formTitle" class="form-title-input" placeholder="Form Title" value="Untitled Form">
+                <textarea id="formDescription" class="form-desc-input" placeholder="Form Description"></textarea>
+                
+                <div id="questionsContainer">
+                    <!-- Questions will be added here -->
+                </div>
+                
+                <button class="add-question-btn" onclick="addQuestion()">
+                    ➕ Add Question
+                </button>
+                
+                <div class="form-actions">
+                    <button class="btn-primary" onclick="saveForm()">💾 Save Form</button>
+                    <button class="btn-secondary" onclick="goBackToDashboard()">← Back to Dashboard</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Viewer -->
+        <div id="formViewer" class="main-section hidden">
+            <div class="form-viewer">
+                <button class="back-btn" onclick="goBackToDashboard()">← Back to Dashboard</button>
+                <div id="formViewContent">
+                    <!-- Form content will be loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Responses Viewer -->
+        <div id="responsesViewer" class="main-section hidden">
+            <div class="responses-viewer">
+                <button class="back-btn" onclick="goBackToDashboard()">← Back to Dashboard</button>
+                <div class="responses-header">
+                    <h2 id="responsesTitle">Form Responses</h2>
+                    <span id="responseCount">0 responses</span>
+                </div>
+                <div id="responsesContent">
+                    <!-- Responses will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
